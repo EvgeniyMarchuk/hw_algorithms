@@ -128,8 +128,8 @@ int main() {
     int64_t n;
     while (std::cin >> n) {
         if (n < 0) {
-            std::cout << "Incorrect input data\n";
-            break;
+            std::cout << "Incorrect input data\n\n";
+            continue;
         }
         
         List<int64_t> l;
@@ -144,5 +144,6 @@ int main() {
         l.reverse_list();
         
         l.PrintList();
+        std::cout << "\n";
     }
 }

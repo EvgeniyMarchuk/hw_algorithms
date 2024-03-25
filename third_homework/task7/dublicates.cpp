@@ -6,6 +6,7 @@
 int main() {
     std::string s;
     while (std::cin >> s) {
+        std::cout << "s = " << s << '\n';
         std::deque<char> deq;
         for (char c : s) {
             bool flag  = false;

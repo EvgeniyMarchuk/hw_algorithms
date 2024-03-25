@@ -122,9 +122,9 @@ void List<T>::DeleteNode(int64_t val) {
 int main() {
     int64_t n;
     while (std::cin >> n) {
-        if (n < 0) {
-            std::cout << "Incorrect input data\n";
-            break;
+        if (n <= 0) {
+            std::cout << "Incorrect input data\n\n";
+            continue;
         }
 
         List<int64_t> l;
@@ -134,12 +134,15 @@ int main() {
             l.PushBack(x);
         }
 
+        std::cout << "original list:\n";
         l.PrintList();
 
         int64_t deleted_value;
         std::cin >> deleted_value;
+        std::cout << "deleted value = " << deleted_value << '\n';
         l.DeleteNode(deleted_value);
 
+        std::cout << "modified list:\n";
         l.PrintList();
         std::cout << "\n";
     }

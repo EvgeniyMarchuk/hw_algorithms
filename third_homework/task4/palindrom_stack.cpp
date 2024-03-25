@@ -6,6 +6,7 @@
 int main() {
     std::string s;
     while (std::cin >> s) {
+        std::cout << "s = " << s << '\n';
         std::stack<char> st;
         bool flag = false;
         for (size_t i = 0; i != s.size(); ++i) {
@@ -14,7 +15,7 @@ int main() {
             } else if (s.size() % 2 != 0 && i == s.size() / 2) {
                 continue;
             } else if (st.top() != s[i]) {
-                std::cout << s << " is not palindrom\n";
+                std::cout << s << " is not palindrom\n\n";
                 flag = true;
                 break;
             } else {
@@ -25,9 +26,9 @@ int main() {
         if (flag) {
             continue;
         } else if (st.empty()) {
-            std::cout << s << " is palindrom\n";
+            std::cout << s << " is palindrom\n\n";
         } else {
-            std::cout << s << " is not palindrom\n";
+            std::cout << s << " is not palindrom\n\n";
         }
         /*
         for (char c : s) {

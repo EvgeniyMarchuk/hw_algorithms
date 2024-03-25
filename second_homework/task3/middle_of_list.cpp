@@ -108,7 +108,7 @@ Node<T> *List<T>::FindMiddle() const {
     Node<T> *fast = head->next;
    
     if (fast == head) {
-        std::cout << "list is empty\n";
+        std::cout << "list is empty\n\n";
         return nullptr;
     }
 
@@ -130,8 +130,8 @@ int main() {
     int64_t n;
     while (std::cin >> n) {
         if (n < 0) {
-            std::cout << "Incorrect input data\n";
-            break;
+            std::cout << "Incorrect input data\n\n";
+            continue;
         }
 
         List<int64_t> l;

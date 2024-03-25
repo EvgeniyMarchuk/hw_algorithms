@@ -6,7 +6,7 @@ int main() {
     int64_t n;
     while(std::cin >> n) {
         if (n < 0) {
-            std::cout << "Incorrect input data\n";
+            std::cout << "Incorrect input data\n\n";
             continue;
         }
         
@@ -28,10 +28,11 @@ int main() {
                 lbound = middle;
         }
         
+        std::cout << "n = " << n << '\n';
         if (found) {
-            std::cout << middle << "\n"; 
+            std::cout << "answer = " << middle << "\n\n"; 
             continue;
         }
-        std::cout << rbound - (std::abs(n - rbound * rbound) > std::abs(n - (rbound - 1) * (rbound - 1))) << '\n';
+        std::cout << "answer = " << rbound - (std::abs(n - rbound * rbound) > std::abs(n - (rbound - 1) * (rbound - 1))) << "\n\n";
     }
 }
